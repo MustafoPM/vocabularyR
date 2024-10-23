@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+body {
+    background-color: rgb(149, 36, 255);
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    color: black;
+    border-radius: 15%;
+    gap: 110px;
+    margin-top: 4%;
+}
+
+.btn1 {
+    width: 223px;
+    height: 99px;
+    border: 0px;
+    overflow-y: auto;
+    font-size: 20px;
+    color: white;
+    background-color: #0000009e;
+    border-radius: 7%;
+}
+
+.btn2 {
+    width: 223px;
+    height: 99px;
+    border: 0px;
+    overflow-y: auto;
+    font-size: 20px;
+    color: white;
+    background-color: #0000009e;
+    border-radius: 7%;
+}
+
+textarea::placeholder {
+    color: white;
+    /* Цвет плейсхолдера */
+    text-align: center;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    /* Центрирование текста плейсхолдера */
+    /* Спецэффекты для плейсхолдера (если нужно) */
+}
+
+.Items {
+    display: grid;
+    gap: 10px;
+    justify-content: end;
+    align-items: center;
+    justify-items: center;
+    align-content: space-around;
+    margin-top: 20px;
+}
+
+.SettingBtn {
+    border-radius: 50%;
+    border: 0px;
+    width: 60px;
+    height: 60px;
+    background-color: #ff00ecab;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: medium;
+    color: white;
+    text-align: center;
+}
+
+.LearnButton {
+    border-radius: 50%;
+    border: 0px;
+    width: 60px;
+    height: 60px;
+    background-color: #ff00ecab;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: large;
+    color: white;
+}
+
+.CenterButton {
+    border-radius: 50%;
+    border: 0px;
+    width: 100px;
+    height: 100px;
+    background-color: #ff00ecab;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: large;
+    color: white;
+}
+
+.output {
+    border: 2px solid #3afff7;
+    padding: 110px;
+    margin: 20px auto;
+    border-radius: 6px;
+    background-color: rgb(145 73 220 / 95%);
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    max-height: 89px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: pre-line;
+    max-width: 550px;
+    text-align: left;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: large;
+}
+
+.output::-webkit-scrollbar {
+    width: 12px;
+    height: 20px;
+}
+
+.output::-webkit-scrollbar-track {
+    background: #3afff7;
+}
+
+.output::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 16px;
+    border: 3px solid rgba(255, 255, 255, 0.237);
+}
+
+.LearnBtn {
+    background-color: #3afff78a;
+    border-radius: 8px;
+    width: 200px;
+    height: 200px;
+}
