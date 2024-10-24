@@ -14,6 +14,15 @@ body {
     margin-top: 4%;
 }
 
+#subscribe-form {
+    display: flex;
+    flex-direction: column;
+    /* Располагаем элементы по вертикали */
+    align-items: flex-start;
+    gap: 10px;
+    align-items: center;
+}
+
 .btn1 {
     width: 223px;
     height: 99px;
@@ -131,7 +140,6 @@ textarea::placeholder {
 }
 
 .popup {
-    /* Скрываем по умолчанию */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -141,12 +149,40 @@ textarea::placeholder {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    border-radius: 15px;
+    background-color: #c700ffb5;
 }
 
-.popup h2 {
-    margin-top: 0;
+.News {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+.mail {
+    color: white;
+}
+
+.emailinput {
+    color: black;
+    border: 0px;
+    border-radius: 2px;
+    height: 36px;
+    width: 227px;
+    border: 0px;
+}
+
+.subscribe-button {
+    background-color: #fd4cff9e;
+    width: 134px;
+    height: 34px;
+    border-radius: 50px;
+    border: 0px;
 }
 
 #close-popup {
-    margin-top: 10px;
+    background-color: #fd4cff9e;
+    width: 134px;
+    height: 34px;
+    border-radius: 50px;
+    border: 0px;
 }
