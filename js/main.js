@@ -24,3 +24,38 @@ document.addEventListener('DOMContentLoaded', function() {
     const outputDiv = document.getElementById('output');
     outputDiv.style.whiteSpace = 'pre-line'; // To preserve line breaks
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const popup = document.getElementById('subscribe-popup');
+    const closePopupButton = document.getElementById('close-popup');
+
+    // Показать всплывающее окно
+    popup.style.display = 'block';
+
+    closePopupButton.onclick = function() {
+        popup.style.display = 'none';
+    };
+
+    document.getElementById('subscribe-form').onsubmit = function(event) {
+        event.preventDefault();
+        const email = document.getElementById('email').value;
+
+        // Отправка почты на сервер
+        fetch('/subscribe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email: email })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Подписка успешна!'); // Уведомление о завершении
+                popup.style.display = 'none'; // Закрыть попап
+            })
+            .catch(error => {
+                console.error('Ошибка:', error);
+                alert('Произошла ошибка. Попробуйте еще раз.');
+            });
+    };
+});

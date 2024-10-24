@@ -129,3 +129,24 @@ textarea::placeholder {
     width: 200px;
     height: 200px;
 }
+
+.popup {
+    /* Скрываем по умолчанию */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.popup h2 {
+    margin-top: 0;
+}
+
+#close-popup {
+    margin-top: 10px;
+}

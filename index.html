@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LearnWithCard's</title>
-    <img src="" alt="" \>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="image/333331.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 </head>
 
 <body>
@@ -16,13 +17,49 @@
         <button type="button" class="CenterButton" id="submitButton">TAP</button>
         <textarea class="btn2" placeholder="Перевод" id="inp2" style="overflow-y: hidden; resize: none;"></textarea>
     </div>
+
     <div class="output" id="output"></div>
+
     <div class="Items">
         <button onclick="window.location.href = 'main.html'" class="LearnButton">Учить</button>
         <button onclick="window.location.href = 'setting.html'" class="SettingBtn">Настройки</button>
     </div>
 
-    <script src="js/main.js "></script>
+    <!-- Всплывающее окно для подписки -->
+    <div id="subscribe-popup" class="popup">
+        <form id="subscribe-form" action="https://docs.google.com/forms/d/e/1FAIpQLSdhYbvdYbzK4q6da3O3eO4fbqYjOwhoP5ZMELBsc2fs4X-N6g/viewform?usp=sf_link/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+            <h2>Подписка на новости</h2>
+            <label for="email">Введите вашу почту:</label>
+            <input type="email" id="email" name="entry.2108151051" required>
+            <button type="submit">Подписаться</button>
+        </form>
+        <button id="close-popup">Закрыть</button>
+    </div>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+
+
+    <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const popup = document.getElementById('subscribe-popup');
+            const closePopupButton = document.getElementById('close-popup');
+
+            // Показать всплывающее окно при загрузке страницы
+            popup.style.display = 'block';
+
+            closePopupButton.onclick = function() {
+                popup.style.display = 'none';
+            };
+
+            // Обработка отправки формы подписки
+            document.getElementById('subscribe-form').onsubmit = function(event) {
+                alert('Спасибо за подписку!'); // Показываем сообщение пользователю
+                popup.style.display = 'none'; // Закрываем попап
+            };
+        });
+    </script>
 </body>
 
 </html>
