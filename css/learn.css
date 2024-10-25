@@ -1,0 +1,15 @@
+.btn a {
+    display: flex;
+    flex-direction: inherit;
+    background-color: aquamarine;
+    border-radius: 10px;
+    text-decoration: none;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: baseline;
+}
